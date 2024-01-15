@@ -189,10 +189,7 @@ def start() -> None:
         sys.exit(0)
 
     elif given_player[1] == 'computer':
-        start_time = time.process_time()
         computer_game(output_file, code_length, max_guesses, colours, set_code[1:])
-        end_time = time.process_time()
-        print(end_time-start_time)
         sys.exit(0)
 
 

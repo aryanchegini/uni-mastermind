@@ -1,0 +1,9 @@
+Guess 1: Ill-formed guess provided
+Guess 2: black
+Guess 3: black black white
+Guess 4: white white
+Guess 5: white white white
+Guess 6: Ill-formed guess provided
+Guess 7: black black white white
+Guess 8: black black black black
+You won in 8 guesses. Congratulations!

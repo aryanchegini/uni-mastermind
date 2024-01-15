@@ -1,0 +1,18 @@
+Example 1:
+python Mastermind.py inputexample1.txt outputexample1.txt 3
+(updated) Example 2:
+python Mastermind.py inputexample2.txt outputexample2.txt 3
+Example 3:
+python Mastermind.py inputexample3.txt outputexample3.txt 5
+Example 4:
+python Mastermind.py inputexample4.txt outputexample4.txt 3
+Example 5:
+python Mastermind.py inputexample5.txt outputexample5.txt 4 12 "red" "green" "yellow" "violet" "purple" "mauve"
+Example 6:
+python Mastermind.py inputexample6.txt outputexample6.txt 3 10
+Example 7:
+python Mastermind.py inputexample7.txt outputexample7.txt 3 10
+Example 8:
+python Mastermind.py inputexample8.txt outputexample8.txt 3 4
+(note inputexample8.txt is identical to inputexample1.txt)
+

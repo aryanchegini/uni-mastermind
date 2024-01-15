@@ -1,7 +1,7 @@
-Guess 1: black white 
-Guess 2: black 
+Guess 1: black white
+Guess 2: black
 Guess 3: Ill-formed guess provided
-Guess 4: black 
-Guess 5: black black black 
+Guess 4: black
+Guess 5: black black black
 You won in 5 guesses. Congratulations!
 The game was completed. Further lines were ignored.

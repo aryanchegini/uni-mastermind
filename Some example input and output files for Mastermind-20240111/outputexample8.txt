@@ -1,0 +1,6 @@
+Guess 1: black white
+Guess 2: black
+Guess 3: Ill-formed guess provided
+Guess 4: black
+You lost. Please try again.
+You can only have 4 guesses.

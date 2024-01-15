@@ -1,6 +1,0 @@
-code red blue yellow yellow yellow
-player human
-yellow red red green red
-red yellow blue yellow yellow
-red yellow yellow blue yellow
-red blue yellow yellow yellow
