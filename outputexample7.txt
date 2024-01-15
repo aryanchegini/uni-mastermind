@@ -1,0 +1,5 @@
+Guess 1: white white 
+Guess 2: black black black white white 
+Guess 3: black black black white white 
+Guess 4: black black black black black 
+You won in 4 guesses. Congratulations!

@@ -1,0 +1,151 @@
+Example 1:
+python Mastermind.py inputexample1.txt outputexample1.txt 3
+
+inputexample1.txt:
+code red blue yellow
+player human
+red green blue
+red red red
+blue blue blue yellow
+red green green
+red blue yellow
+red red red
+
+outputexample1.txt:
+Guess 1: black white
+Guess 2: black
+Guess 3: Ill-formed guess provided
+Guess 4: black
+Guess 5: black black black
+You won in 5 guesses. Congratulations!
+The game was completed. Further lines were ignored.
+
+
+Example 2:
+python Mastermind.py inputexample2.txt outputexample2.txt 3
+
+inputexample2.txt:
+code red blue yellow
+player human
+red green blue
+red red red
+blue blue blue yellow
+red green green
+red blue green
+red purple purple
+
+outputexample2.txt:
+Guess 1: black white
+Guess 2: black
+Guess 3: Ill-formed guess provided
+Guess 4: black
+Guess 5: black black
+Guess 6: Ill-formed guess provided
+You lost. Please try again.
+
+
+Example 3:
+python Mastermind.py inputexample3.txt outputexample3.txt 5
+
+inputexample3.txt:
+code red blue yellow
+player human
+red green blue
+red red red
+
+outputexample3.txt:
+No or ill-formed code provided
+
+
+Example 4:
+python Mastermind.py inputexample4.txt outputexample4.txt 3
+
+inputexample4.txt:
+code red blue yellow
+player humans
+red green blue
+red red red
+
+outputexample4.txt:
+No or ill-formed player provided
+
+
+Example 5:
+python Mastermind.py inputexample5.txt outputexample5.txt 4 12 "red" "green" "yellow" "violet" "purple" "mauve"
+
+inputexample5.txt:
+code red purple yellow violet
+player human
+red green
+red red red red
+red purple purple yellow
+purple red green green
+purple red violet green
+red purple violet yellow green
+red purple violet yellow
+red purple yellow violet
+
+outputexample5.txt:
+Guess 1: Ill-formed guess provided
+Guess 2: black
+Guess 3: black black white
+Guess 4: white white
+Guess 5: white white white
+Guess 6: Ill-formed guess provided
+Guess 7: black black white white
+Guess 8: black black black black
+You won in 8 guesses. Congratulations!
+
+
+Example 6:
+python3 Mastermind.py inputexample6.txt outputexample6.txt 3 10
+
+inputexample6.txt:
+code blue blue yellow
+player human
+red green green
+red red red
+blue red red
+
+outputexample6.txt:
+Guess 1:
+Guess 2:
+Guess 3: black
+You lost. Please try again.
+
+
+Example 7:
+python3 Mastermind.py inputexample7.txt outputexample7.txt 3 10
+
+inputexample7.txt:
+code red blue yellow
+player computer
+
+outputexample7.txt:
+Guess 1: black
+Guess 2: black black
+Guess 3: black black black
+You won in 3 guesses. Congratulations!
+
+
+Example 8:
+python Mastermind.py inputexample8.txt outputexample8.txt 3 4
+
+inputexample8.txt:
+code red blue yellow
+player human
+red green blue
+red red red
+blue blue blue yellow
+red green green
+red blue yellow
+red red red
+
+outputexample8.txt:
+Guess 1: black white
+Guess 2: black
+Guess 3: Ill-formed guess provided
+Guess 4: black
+You lost. Please try again.
+You can only have 4 guesses.
+
