@@ -2,7 +2,6 @@ import sys
 import itertools
 import os
 import random
-import time
 
 
 def print_to_output(outputfile: str, message: str, mode: str = 'w') -> None:
@@ -76,8 +75,7 @@ def parse_inputs() -> tuple[str, str, int, int, list[str]]:
     return input_file, output_file, code_length, max_guesses, colours
 
 
-def map_guesses(guesses: list[str], code_length: int, max_guesses: int, available_colours: list[str],
-                set_code: list[int], outputfile: str) -> None:
+def map_guesses(guesses: list[str], code_length: int, max_guesses: int, available_colours: list[str], set_code: list[int], outputfile: str) -> None:
     with open(outputfile, 'w'):  # clear the output file
         pass
 
@@ -109,14 +107,17 @@ def map_guesses(guesses: list[str], code_length: int, max_guesses: int, availabl
         print_to_output(outputfile, "You lost. Please try again.", "a")
 
 
-def computer_game(outputfile: str, code_length: int, max_guesses: int, available_colours: list,
-                  secret_code: list) -> None:
+def computer_game(outputfile: str, code_length: int, max_guesses: int, available_colours: list, secret_code: list) -> None:
+    """
+    Uses Donald Knuth's algorithm.
+    """
     # initialise files
     print_to_output("computerGame.txt", "code " + " ".join(secret_code))
     print_to_output("computerGame.txt", "player human", 'a')
     with open(outputfile, 'w'):  # clear the output file
         pass
 
+    # generate a list of all possible guesses
     possible_guesses = list(itertools.product(available_colours, repeat=code_length))
 
     guess_count = 0
@@ -124,7 +125,7 @@ def computer_game(outputfile: str, code_length: int, max_guesses: int, available
     while guess_count < max_guesses and not won:
         guess_count += 1
         guess = list(random.choice(possible_guesses))  # return a random guess from the list of possible guesses
-
+        
         print_to_output("computerGame.txt", " ".join(guess), 'a')
         pegs = get_feedback(guess, secret_code)
         feedback = 'black ' * pegs[0] + 'white ' * pegs[1]
@@ -146,7 +147,7 @@ def start() -> None:
     input_file, output_file, code_length, max_guesses, colours = parse_inputs()
     with open(input_file, 'r') as file:
         lines = file.readlines()  # store each line of the input file into a list
-    lines = list(map(lambda x: x.rstrip('\n').rstrip(), lines))  # removes '\n' from the lines
+    lines = list(map(lambda x: x.rstrip('\n').rstrip(), lines))  # go through each line and remove '\n' and any spaces from the end
 
     while lines and lines[-1].strip() == "":  # remove any blank lines at the end of the file
         lines.pop()
@@ -158,7 +159,7 @@ def start() -> None:
         print_to_output(output_file, 'No or ill-formed code provided')
         sys.exit(4)
 
-    if len(set_code[1:]) != code_length:
+    if len(set_code[1:]) != code_length:  # if the code length is not correct
         print_to_output(output_file, 'No or ill-formed code provided')
         sys.exit(4)
 
@@ -168,7 +169,7 @@ def start() -> None:
             sys.exit(4)
 
     # player exit codes
-    given_player = lines[1].split(' ')
+    given_player = lines[1].split(' ')  # should contain ['player', 'human/computer']
 
     if given_player[0] != 'player':
         print_to_output(output_file, 'No or ill-formed player provided')
